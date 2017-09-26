@@ -1,0 +1,174 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/saksrisu/project
+Eaccu
+Z1 w1506439054
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8ACCU.vhd
+Z6 FACCU.vhd
+l0
+L5
+VRD06I454;G1]W7JIA@7f>2
+!s100 b4:UfC6LAR`F?WnQ>`];M3
+Z7 OL;C;10.4c_5;61
+32
+Z8 !s110 1506439058
+!i10b 1
+Z9 !s108 1506439058.000000
+Z10 !s90 -work|system|ACCU.vhd|
+Z11 !s107 ACCU.vhd|
+!i113 0
+Z12 o-work system
+Z13 tExplicit 1
+Av1
+R2
+R3
+R4
+DEx4 work 4 accu 0 22 RD06I454;G1]W7JIA@7f>2
+l19
+L16
+VHb:KEehekO4V5dWJU;R8Y3
+!s100 az=UajE7XHd3eL?RMl3;f1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Edpram
+Z14 w1506435916
+R2
+R3
+R4
+R0
+Z15 8DPRAM.vhd
+Z16 FDPRAM.vhd
+l0
+L5
+VWhh5bZe_b^6YKB[U`D3fC1
+!s100 aFk0HEQAlci69b<lec_1b3
+R7
+32
+Z17 !s110 1506435918
+!i10b 1
+Z18 !s108 1506435918.000000
+Z19 !s90 -work|system|DPRAM.vhd|
+Z20 !s107 DPRAM.vhd|
+!i113 0
+R12
+R13
+Av1
+R2
+R3
+R4
+DEx4 work 5 dpram 0 22 Whh5bZe_b^6YKB[U`D3fC1
+l27
+L23
+V4HIf8UeC9OogS:iJ^h8Sz0
+!s100 R=`lHJhmBWgI_[WJ7ZXW43
+R7
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 0
+R12
+R13
+Emul
+Z21 w1506437082
+R2
+R3
+R4
+R0
+Z22 8MUL.vhd
+Z23 FMUL.vhd
+l0
+L5
+VCYOZWI>eUNXM2P`hX0=ED0
+!s100 mPQX<`64]bZ]QPBJ38`RM2
+R7
+32
+Z24 !s110 1506437085
+!i10b 1
+Z25 !s108 1506437085.000000
+Z26 !s90 -work|system|MUL.vhd|
+Z27 !s107 MUL.vhd|
+!i113 0
+R12
+R13
+Av1
+R2
+R3
+R4
+DEx4 work 3 mul 0 22 CYOZWI>eUNXM2P`hX0=ED0
+l17
+L14
+V@G@l;]C`j4YCY3M4MN`@?0
+!s100 0ZHlW^C=>0DO_8aJbEF_41
+R7
+32
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 0
+R12
+R13
+Erom
+Z28 w1506435428
+R2
+R3
+R4
+R0
+Z29 8ROM.vhd
+Z30 FROM.vhd
+l0
+L5
+Vcd1hRV:8hS:e1jK^]m_C^2
+!s100 23zRJM>?lkY9f=R;hzYJ10
+R7
+32
+Z31 !s110 1506435431
+!i10b 1
+Z32 !s108 1506435431.000000
+Z33 !s90 -work|system|ROM.vhd|
+Z34 !s107 ROM.vhd|
+!i113 0
+R12
+R13
+Av1
+R2
+R3
+R4
+DEx4 work 3 rom 0 22 cd1hRV:8hS:e1jK^]m_C^2
+l19
+L13
+VX>QjB:0IA2S<z@`b8D8m<3
+!s100 1cL^SO_eEn>TY]JzmS?LW1
+R7
+32
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 0
+R12
+R13
