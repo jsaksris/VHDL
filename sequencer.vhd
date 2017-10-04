@@ -18,7 +18,7 @@ entity seq is
 end seq;
 
 architecture v1 of seq is
-type state_type is (s0,s1,s2,s3,s4);
+type state_type is (s0,s1,s2,s3,s4,s5);
 signal state, next_state : state_type;
 signal ce_mem: std_logic;
 signal count: std_logic_vector (4 downto 0);
@@ -38,11 +38,22 @@ counter <= count;
 
       when s1 =>
 	if ce = '0' and ce /= ce_mem then 
-          next_state <= s2;
+          next_state <= s6; --reset before s2
         else 
-          next_state <= s1;
+           if count < "11111" then
+              next_state <= s1;
+           else 
+              next_state <= s5;
+           end if;
         end if;  
-
+      
+      when s5 => 
+	if ce = '0' and ce /= ce_mem then 
+              next_state <= s2;
+        else
+              next_state <= s5;
+        end if;
+      when s6 => next_state <= s2;
       when s2 => --calculating
 	if ce ='1' and ce /= ce_mem then
           next_state <= s1;
@@ -74,7 +85,8 @@ counter <= count;
      if rst = '1' then
 	state <= s0;
      elsif clk = '1' and clk'event then
-	state <= next_state;
+        end if;
+        state <= next_state;
         ce_mem <= ce;
      end if;
   end process;
@@ -85,11 +97,15 @@ counter <= count;
       when s0 => DPRAM_go <= '0'; MUL_go <= '0'; ACCU_go <= '0';
                  count <= "00000";  
       when s1 => DPRAM_go <= '1'; MUL_go <= '0'; ACCU_go <= '0';
+                 count <= std_logic_vector(unsigned(count) + 1);
+      when s5 => DPRAM_go <= '0'; MUL_go <= '0'; ACCU_go <= '0';
+                 count <= "00000";
+      when s6 => DPRAM_go <= '0'; MUL_go <= '0'; ACCU_go <= '0';
                  count <= "00000";
       when s2 => DPRAM_go <= '0'; MUL_go <= '1'; ACCU_go <= '0'; 
       when s3 => DPRAM_go <= '0'; MUL_go <= '0'; ACCU_go <= '1';
-                 count <= std_logic_vector(unsigned(count) + 1);
       when s4 => DPRAM_go <= '0'; MUL_go <= '0'; ACCU_go <= '0';
+                 count <= std_logic_vector(unsigned(count) + 1);
                  ACCU_done <= '1';
       when others => DPRAM_go <= '0'; MUL_go <= '0'; ACCU_go <= '0';
 

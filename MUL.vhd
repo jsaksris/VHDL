@@ -15,7 +15,7 @@ architecture v1 of MUL is
 signal n1 : unsigned (11 downto 0) := (others => '0');
 signal n2 : unsigned (10 downto 0) := (others => '0');
 begin 
-multiply: process(clk, A, B)
+multiply: process(clk)
   begin
     if clk = '0' and clk'event then
      n1 <= unsigned(A);
